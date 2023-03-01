@@ -55,6 +55,7 @@ namespace NatureBioMarkt
             this.pictureBox1.Size = new System.Drawing.Size(782, 285);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -96,7 +97,7 @@ namespace NatureBioMarkt
             this.MinimizeBox = false;
             this.Name = "loadingscreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ProNature_Biomarkt Gmbh";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

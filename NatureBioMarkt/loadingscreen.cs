@@ -41,12 +41,27 @@ namespace NatureBioMarkt
             if (loadinbarvalue >= progressBar1.Maximum)
             {
                 loadingbar_timer.Stop();
+                // finish loading show main menu screen
+                mainmanuscreen mainmanuscreen = new mainmanuscreen();
+                mainmanuscreen.Show();
+                // bei this ich meinte the loadingscreen verschwendet dann ich sehe die hauptmenu
+                this.Hide();
             }
         }
+       
+        
 
         private void label2_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+        
+        
+
     }
 }

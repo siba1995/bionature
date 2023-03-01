@@ -16,7 +16,7 @@ namespace NatureBioMarkt
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new loadingscreen());
+            Application.Run(new products());
         }
     }
 }
