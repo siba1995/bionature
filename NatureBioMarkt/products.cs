@@ -68,9 +68,9 @@ namespace NatureBioMarkt
         }
 
         private void btnEmpty_Click(object sender, EventArgs e)
-        {
-            
-
+        { 
+            clearall();
+            Showproduct();
         }
 
         private void btnEditProduct_Click(object sender, EventArgs e)
@@ -82,7 +82,12 @@ namespace NatureBioMarkt
             }
             
 
-            string query = string.Format("edit Product set '{0}','{1}','{2}','{3}' where Id={4}",textBox_ProductName.Text, textBox_ProduktMarke.Text, comboBox_ProduktCategorie.Text, textBox_ProductPrice.Text, lastselectedprodkey);
+            string query = string.Format("update Product set Name = '{0}',Brand='{1}',Category='{2}',price='{3}' where Id={4}"
+                , textBox_ProductName.Text
+                ,textBox_ProduktMarke.Text
+                ,comboBox_ProduktCategorie.Text
+                ,textBox_ProductPrice.Text
+                ,lastselectedprodkey);
 
 
             executequery(query);

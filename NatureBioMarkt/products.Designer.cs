@@ -42,7 +42,9 @@ namespace NatureBioMarkt
             this.btnEmpty = new System.Windows.Forms.Button();
             this.btnProductDelet = new System.Windows.Forms.Button();
             this.productsDGV = new System.Windows.Forms.DataGridView();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             ((System.ComponentModel.ISupportInitialize)(this.productsDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -58,6 +60,9 @@ namespace NatureBioMarkt
             // 
             // textBox_ProductName
             // 
+            this.textBox_ProductName.AcceptsReturn = true;
+            this.textBox_ProductName.AcceptsTab = true;
+            this.textBox_ProductName.AllowDrop = true;
             this.textBox_ProductName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.textBox_ProductName.ForeColor = System.Drawing.Color.White;
             this.textBox_ProductName.Location = new System.Drawing.Point(93, 12);
@@ -207,6 +212,11 @@ namespace NatureBioMarkt
             this.productsDGV.TabIndex = 13;
             this.productsDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productsDGV_CellContentClick);
             // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
             // products
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -233,6 +243,7 @@ namespace NatureBioMarkt
             this.Text = "products";
             this.Load += new System.EventHandler(this.products_Load);
             ((System.ComponentModel.ISupportInitialize)(this.productsDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,5 +264,6 @@ namespace NatureBioMarkt
         private System.Windows.Forms.Button btnEmpty;
         private System.Windows.Forms.Button btnProductDelet;
         private System.Windows.Forms.DataGridView productsDGV;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
     }
 }
